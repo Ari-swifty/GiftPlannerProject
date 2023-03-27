@@ -49,18 +49,16 @@ class LoginFragment : BaseFragment() {
     private fun initGoogleSignIn() {
         auth = Firebase.auth
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("870735082696-od5hvscifl499du9h6h4l407gttdeuir.apps.googleusercontent.com")
+            .requestIdToken(resources.getString(R.string.web_client_id))
             .requestEmail()
             .build()
         googleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
-
     }
 
     private fun googleSignIn() {
         showLoading("Signing In...")
         val signInIntent = googleSignInClient.signInIntent
         resultLauncher.launch(signInIntent)
-        //startActivityForResult(signInIntent,RC_SIGN_IN)
     }
 
     private var resultLauncher =
@@ -71,19 +69,19 @@ class LoginFragment : BaseFragment() {
                     val account = task.getResult(ApiException::class.java)
                     firebaseAuthwithGoogle(account.idToken)
                 } catch (e: ApiException) {
-                    Log.d(TAG,"${e.message}")
+                    Log.d(TAG, "${e.message}")
                 }
             }
         }
 
     private fun firebaseAuthwithGoogle(idToken: String?) {
-        val creadential = GoogleAuthProvider.getCredential(idToken, null)
-        auth.signInWithCredential(creadential)
+        val credential = GoogleAuthProvider.getCredential(idToken, null)
+        auth.signInWithCredential(credential)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
                     stopLoading()
                     val user = auth.currentUser?.displayName
-                    Toast.makeText(requireContext(),"Hello $user",Toast.LENGTH_LONG).show()
+                    Toast.makeText(requireContext(), "Hello $user", Toast.LENGTH_LONG).show()
                 } else {
                     stopLoading()
                     Log.d(TAG, "${task.exception}")
