@@ -15,4 +15,5 @@ private val progressDialog by lazy { ProgressBarr(requireContext()) }
     {
         progressDialog.stop()
     }
+
 }
