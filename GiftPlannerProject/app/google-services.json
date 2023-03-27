@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "870735082696",
+    "project_id": "giftplannerapp-8a4aa",
+    "storage_bucket": "giftplannerapp-8a4aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870735082696:android:675285e31f5e1f05c9a1fd",
+        "android_client_info": {
+          "package_name": "com.arigarasuthan.giftplannerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870735082696-b72m16uv0pctbnhq9u0b2a23g12a6ohl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arigarasuthan.giftplannerapp",
+            "certificate_hash": "0015a1b418f4280e41cb44c76695c1959a5a2274"
+          }
+        },
+        {
+          "client_id": "870735082696-od5hvscifl499du9h6h4l407gttdeuir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-5Wl11kfC6WxZpiX_wGcIUd3R1YcBj8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870735082696-od5hvscifl499du9h6h4l407gttdeuir.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
