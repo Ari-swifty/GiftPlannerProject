@@ -10,4 +10,5 @@
     <color name="dialogBackground">#60000000</color>
     <color name="colorPrimary">#bc214b</color>
     <color name="bg_color">#00b894</color>
+    <color name="login_with_google_color">#e74c3c</color>
 </resources>

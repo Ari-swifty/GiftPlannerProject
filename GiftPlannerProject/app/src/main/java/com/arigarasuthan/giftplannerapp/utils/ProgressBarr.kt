@@ -43,7 +43,7 @@ class ProgressBarr(val context: Context) {
 
         setColorFilter(
             progressBar.indeterminateDrawable,
-            ResourcesCompat.getColor(context.resources, R.color.colorPrimary, null)
+            ResourcesCompat.getColor(context.resources, R.color.bg_color, null)
         )
         cpTitle.setTextColor(Color.WHITE)
         dialog = ProgressDialogg(context)

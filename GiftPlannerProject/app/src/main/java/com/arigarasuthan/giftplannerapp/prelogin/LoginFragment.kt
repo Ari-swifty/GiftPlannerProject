@@ -35,7 +35,7 @@ class LoginFragment : BaseFragment() {
                 googleSignIn()
             }
             submitLogin.setOnClickListener {
-                auth.signOut()
+                showLoading("Authenticating...")
             }
             loginRegister.setOnClickListener {
                 findNavController().navigate(R.id.register)
